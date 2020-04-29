@@ -5,7 +5,7 @@ import { ProductContext, ProductConsumer } from '../context';
 import visaImg from '../assets/images/visa.jpg';
 import masterImg from '../assets/images/master.jpg';
 import CheckoutItem from '../components/App/ChechoutItem'; 
-import config from '../config';
+// import config from '../config';
 
 
 export const Checkout = () => {
