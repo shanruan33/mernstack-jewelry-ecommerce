@@ -1,0 +1,433 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Fonts
+2. Body and some general stuff
+3. Header
+	3.1 Header - Logo
+	3.2 Header - Main Navigation
+	3.3 Header - Search
+	3.4 Header - Shopping
+	3.5 Header - Burger
+4. Home
+5. Menu
+6. Contact
+8. Newsletter
+9. Footer
+
+
+******************************/
+
+/***********
+1. Fonts
+***********/
+
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,700&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap'); */
+
+/*********************************
+6. Map
+*********************************/
+
+.map {
+	width: 100%;
+}
+
+.google_map {
+	width: 100%;
+	height: 531px;
+}
+
+.map_container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#map {
+	width: 100%;
+	height: calc(100% + 30px);
+}
+
+/*********************************
+7. Contact
+*********************************/
+
+.contact {
+	width: 100%;
+	background: #f9f5f5;
+	padding-top: 99px;
+	padding-bottom: 97px;
+}
+
+.review_form_container {
+	width: 100%;
+}
+
+.review_form_title {
+	font-family: 'Merriweather', serif;
+	font-size: 30px;
+	color: #232323;
+	text-transform: uppercase;
+	line-height: 0.75;
+	text-align: center;
+}
+
+.review_form_content {
+	margin-top: 99px;
+	text-align: center;
+}
+
+.review_form {
+	width: 100%;
+}
+
+.review_form div {
+	width: 100%;
+}
+
+.review_form_input {
+	display: block;
+	width: calc((100% - 60px) / 3);
+	height: 53px;
+	border: solid 1px #b5b5b5;
+	outline: none;
+	padding-left: 22px;
+}
+
+.review_form_text {
+	width: 100%;
+	height: 53px;
+	border: solid 1px #b5b5b5;
+	outline: none;
+	padding-left: 22px;
+	margin-top: 27px;
+	height: 234px;
+	padding-top: 20px;
+}
+
+.review_form_input::-webkit-input-placeholder, .review_form_text {
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #8c8c8c !important;
+}
+
+.review_form_input:-moz-placeholder, .review_form_text {
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #8c8c8c !important;
+}
+
+.review_form_input::-moz-placeholder, .review_form_text {
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #8c8c8c !important;
+}
+
+.review_form_input:-ms-input-placeholder, .review_form_text {
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #8c8c8c !important;
+}
+
+.review_form_input::input-placeholder, .review_form_text {
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	font-style: italic;
+	color: #8c8c8c !important;
+}
+
+.review_form_button {
+	width: 179px;
+	height: 46px;
+	border: none;
+	outline: none;
+	background: #BF8B82;
+	color: #FFFFFF;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	cursor: pointer;
+	margin-top: 18px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.review_form_button:hover {
+	background: #e0e3e4;
+	color: #232323;
+}
+
+/*********************************
+8. Contact Text
+*********************************/
+
+.contact_text {
+	width: 100%;
+	padding-top: 101px;
+	padding-bottom: 99px;
+	background: #FFFFFF;
+}
+
+/*********************************
+8.1 Contact Info
+*********************************/
+
+.contact_info {}
+
+.contact_title {
+	font-family: 'Merriweather', serif;
+	font-size: 30px;
+	color: #232323;
+	text-transform: uppercase;
+	line-height: 0.75;
+}
+
+.contact_info_content {
+	margin-top: 99px;
+}
+
+.contact_info_content ul li {
+	margin-bottom: 28px;
+}
+
+.contact_info_content ul li:last-child {
+	margin-bottom: 0;
+}
+
+.contact_info_icon {
+	display: inline-block;
+	width: 22px;
+	text-align: center;
+	margin-right: 15px;
+}
+
+.contact_info_icon img {
+	max-width: 100%;
+}
+
+.contact_info_text {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	color: #232323;
+}
+
+.contact_info_social {
+	margin-top: 73px;
+}
+
+.contact_info_social ul li {
+	display: inline-block;
+	margin-right: 25px;
+}
+
+.contact_info_social ul li:last-child {
+	margin-right: 0;
+}
+
+.contact_info_social ul li a i {
+	font-size: 19px;
+	color: #BF8B82;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.contact_info_social ul li a i:hover {
+	color: #e0e3e4;
+}
+
+/*********************************
+8.2 FAQ
+*********************************/
+
+.faq {}
+
+.faq_content {}
+
+.accordions {
+	margin-top: 80px;
+}
+
+.accordion_container {
+	margin-bottom: 15px;
+}
+
+.accordion {
+	height: 57px;
+	width: 100%;
+	background: #BF8B82;
+	padding-left: 33px;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 400;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.accordion div {
+	max-width: 90%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.accordion.active {
+	background: #FFFFFF;
+	border: solid 1px #b5b5b5;
+	color: #232323;
+}
+
+.accordion:active {
+	background: #fffbfa !important;
+}
+
+.accordion::after {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 13px;
+	height: 100%;
+	content: '+';
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: 600;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.accordion.active::after {
+	color: #232323;
+	content: '-';
+}
+
+.accordion:hover {
+	background: #b5b5b5;
+}
+
+.accordion_panel {
+	padding-right: 8px;
+	max-height: 0px;
+	overflow: hidden;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+
+.accordion_panel p {
+	padding-top: 28px;
+}
+
+.accordion_panel p:last-child {
+	margin-bottom: 0;
+}
+
+
+/*********************************
+10. Footer
+*********************************/
+
+.footer {
+	padding-top: 80px;
+}
+
+.footer_logo a {
+	font-family: 'Merriweather', serif;
+	font-size: 60px;
+	color: #232323;
+}
+
+.footer_nav {
+	margin-top: 14px;
+}
+
+.footer_nav ul li {
+	display: inline-block;
+	margin-right: 53px;
+}
+
+.footer_nav ul li:last-child {
+	margin-right: 0;
+}
+
+.footer_nav ul li a {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #232323;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.footer_nav ul li a:hover {
+	color: #BF8B82;
+}
+
+.footer_social {
+	margin-top: 51px;
+}
+
+.footer_social ul li {
+	display: inline-block;
+	margin-right: 36px;
+}
+
+.footer_social ul li:last-child {
+	margin-right: 0;
+}
+
+.footer_social ul li a i {
+	font-size: 24px;
+	color: #BF8B82;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.footer_social ul li a i:hover {
+	color: #e0e3e4;
+}
+
+.copyright {
+	margin-top: 56px;
+	padding-bottom: 13px;
+	font-family: 'Merriweather', serif;
+	font-size: 12px;
+	color: #232323;
+}

@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+
+/************
+1. 1600px
+************/
+
+@media only screen and (max-width: 1600px)
+{
+	.main_nav
+	{
+		padding-left: 100px;
+	}
+	.shopping
+	{
+		padding-right: 100px;
+		margin-left: 100px;
+	}
+}
+
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	.options_item
+	{
+		padding-left: 15px;
+	}
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+
+	.cart_product_info,
+	.cart_bar_title_content
+	{
+		width: 420px;
+	}
+	.cart_total
+	{
+		margin-top: 60px;
+	}
+	.checkout_input_50
+	{
+		width: 100%;
+		margin-right: 0;
+	}
+	.cart_details
+	{
+		margin-top: 93px;
+	}
+	.footer_nav ul li
+	{
+		margin-right: 30px;
+	}
+}

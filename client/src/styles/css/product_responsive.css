@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+
+
+	.product_content
+	{
+		margin-top: 63px;
+	}
+	.footer_nav ul li
+	{
+		margin-right: 30px;
+	}
+}
+
+
+
+/************
+11. 575px
+************/
+
+@media only screen and (max-width: 575px)
+{
+	p{font-size: 13px;}
+	.home
+	{
+		height: 372px;
+	}
+	.home_container
+{
+	
+	height: 200px;
+}
+	.header
+	{
+		height: 70px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+
+
+	.product_image_thumbnail
+	{
+		width: 80px;
+		height: 80px;
+		margin-right: 15px;
+	}
+
+
+}

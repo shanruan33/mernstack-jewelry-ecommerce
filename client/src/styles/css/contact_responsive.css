@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	.options_item
+	{
+		padding-left: 15px;
+	}
+}
+
+
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+
+	.faq
+	{
+		margin-top: 80px;
+	}
+	.footer_nav ul li
+	{
+		margin-right: 30px;
+	}
+}
+
+
+/************
+10. 767px
+************/
+
+@media only screen and (max-width: 767px)
+{
+	.review_form_input
+	{
+		width: 100%;
+		margin-bottom: 8px;
+	}
+	.review_form_text
+	{
+		margin-top: 0;
+	}
+}
+
+/************
+11. 575px
+************/
+
+@media only screen and (max-width: 575px)
+{
+
+	.review_form_title,
+	.review_form_content
+	{
+		text-align: left;
+	}
+	.google_map
+	{
+		height: 350px;
+	}
+	.accordion
+	{
+		padding-left: 20px;
+		font-size: 13px;
+	}
+	
+
+}
