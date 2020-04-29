@@ -1,8 +1,8 @@
 import React from 'react';
-//import { render } from 'react-dom';
+import { render } from 'react-dom';
 // import "core-js/stable";
 // import "regenerator-runtime/runtime";
-// import { ProductProvider } from './context';
+import { ProductProvider } from './context';
 
 import {
   BrowserRouter as Router,
@@ -41,11 +41,11 @@ import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-  // <ProductProvider>
+  <ProductProvider>
     <Router>
       <App />
     </Router>
-  // </ProductProvider>
+  </ProductProvider>
 
   , document.getElementById('root'));
 
