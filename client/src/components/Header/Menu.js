@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import manifyingGlass from '../../assets/images/magnifying-glass.svg';
+// import manifyingGlass from '../../assets/images/magnifying-glass.svg';
 import '../../utils/custom';
 
 export const Menu = () => {

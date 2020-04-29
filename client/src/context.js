@@ -69,6 +69,7 @@ class ProductProvider extends Component {
     this.getData();
     this.getUserInfo();
     this.recoverCart();
+    console.log(process.env.REACT_APP_STRIPE_TOKEN);
   }
 
 
@@ -427,12 +428,13 @@ class ProductProvider extends Component {
       order: tempProducts
     }, () => { this.sendCartItem() });
     const STRIPE_TOKEN ='pk_test_iLMNoDebIdHBrD0vDzNPieTV000FbD0rmQ';
+    // const stripe = window.Stripe(process.env.REACT_APP_STRIPE_TOKEN);
     const stripe = window.Stripe(STRIPE_TOKEN);
     console.log("checkout clicked");
     stripe.redirectToCheckout({
       items: items,
-      successUrl: 'http://192.168.0.9:8080/success',
-      cancelUrl: 'http://192.168.0.9:8080/canceled',
+      successUrl: 'http://localhost:8080/success',
+      cancelUrl: 'http://localhost:8080/canceled',
       // customerEmail: this.state.email
     });
   }

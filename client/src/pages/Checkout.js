@@ -11,9 +11,11 @@ import CheckoutItem from '../components/App/ChechoutItem';
 export const Checkout = () => {
 
     //stripe
-    const STRIPE_TOKEN ='pk_test_iLMNoDebIdHBrD0vDzNPieTV000FbD0rmQ'
+    
     const [stripe, setStripe] = useState(null);
-    const stripeToken = STRIPE_TOKEN;
+    // const STRIPE_TOKEN ='pk_test_iLMNoDebIdHBrD0vDzNPieTV000FbD0rmQ'
+    // const stripeToken = process.env.REACT_APP_STRIPE_TOKEN;
+    const stripeToken = 'pk_test_iLMNoDebIdHBrD0vDzNPieTV000FbD0rmQ';
 
     useEffect(() => {
         if (window.Stripe) setStripe(window.Stripe(stripeToken))

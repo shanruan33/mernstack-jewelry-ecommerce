@@ -23,7 +23,7 @@ import Blog from './components/Test/Blog';
 
 const App = () => (
   <>
-    {/* <Header /> */}
+    <Header />
     <Link to="/blog">Blog</Link>
     <Link to="/login">Login</Link>
     <Switch>
