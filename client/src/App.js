@@ -24,7 +24,8 @@ import Blog from './components/Test/Blog';
 const App = () => (
   <>
     {/* <Header /> */}
-
+    <Link to="/blog">Blog</Link>
+    <Link to="/login">Login</Link>
     <Switch>
       {/* <Route exact path="/" component={Home} /> */}
       <Route exact path="/login" component={Login} />
