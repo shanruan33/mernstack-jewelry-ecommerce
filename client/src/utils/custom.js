@@ -15,7 +15,6 @@
 import $ from 'jquery';
 
 $(document).on('click', function () {
-	"use strict";
 
 
 	initImage();
@@ -39,7 +38,6 @@ $(document).on('click', function () {
 
 $(document).ready(function () {
 
-	"use strict";
 
 
 	var header = $('.header');
@@ -124,7 +122,7 @@ $(window).bind("load", function () {
 
 				if (acc.hasClass('active')) {
 					var panel = $(acc.next());
-					var panelH = panel.prop('scrollHeight') + "px";
+					// var panelH = panel.prop('scrollHeight') + "px";
 
 					if (panel.css('max-height') == "0px") {
 						panel.css('max-height', panel.prop('scrollHeight') + "px");
@@ -138,7 +136,7 @@ $(window).bind("load", function () {
 					if (acc.hasClass('active')) {
 						acc.removeClass('active');
 						var panel = $(acc.next());
-						var panelH = panel.prop('scrollHeight') + "px";
+						// var panelH = panel.prop('scrollHeight') + "px";
 
 						if (panel.css('max-height') == "0px") {
 							panel.css('max-height', panel.prop('scrollHeight') + "px");
@@ -150,7 +148,7 @@ $(window).bind("load", function () {
 					else {
 						acc.addClass('active');
 						var panel = $(acc.next());
-						var panelH = panel.prop('scrollHeight') + "px";
+						// var panelH = panel.prop('scrollHeight') + "px";
 
 						if (panel.css('max-height') == "0px") {
 							panel.css('max-height', panel.prop('scrollHeight') + "px");

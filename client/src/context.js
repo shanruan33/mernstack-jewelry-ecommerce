@@ -5,6 +5,7 @@ import {
   setInStorage
 } from './utils/storage';
 import Client from './Contentful';
+import config from './config';
 // import $ from 'jquery';
 // import "core-js/stable";
 // import "regenerator-runtime/runtime";
@@ -69,7 +70,6 @@ class ProductProvider extends Component {
     this.getData();
     this.getUserInfo();
     this.recoverCart();
-    console.log(process.env.REACT_APP_STRIPE_TOKEN);
   }
 
 
@@ -427,9 +427,7 @@ class ProductProvider extends Component {
       cart: [],
       order: tempProducts
     }, () => { this.sendCartItem() });
-    const STRIPE_TOKEN ='pk_test_iLMNoDebIdHBrD0vDzNPieTV000FbD0rmQ';
-    // const stripe = window.Stripe(process.env.REACT_APP_STRIPE_TOKEN);
-    const stripe = window.Stripe(STRIPE_TOKEN);
+    const stripe = window.Stripe(config.STRIPE_TOKEN);
     console.log("checkout clicked");
     stripe.redirectToCheckout({
       items: items,

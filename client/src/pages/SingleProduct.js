@@ -9,10 +9,8 @@ import '../utils/custom';
 export default class SingleProduct extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props)
         this.state = {
             id: this.props.match.params.id,
-            // defaultBcg
         };
     }
     static contextType = ProductContext;
