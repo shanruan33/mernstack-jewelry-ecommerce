@@ -427,7 +427,9 @@ class ProductProvider extends Component {
       cart: [],
       order: tempProducts
     }, () => { this.sendCartItem() });
-    const stripe = window.Stripe(config.STRIPE_TOKEN);
+    const stripeToken;
+    config ? stripeToken = config.STRIPE_TOKEN : stripeToken = STRIPE_TOKEN;
+    const stripe = window.Stripe(stripeToken);
     console.log("checkout clicked");
     stripe.redirectToCheckout({
       items: items,
