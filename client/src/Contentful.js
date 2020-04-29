@@ -1,5 +1,5 @@
 import { createClient } from 'contentful';
-import config from './config';
+// import config from './config';
 
 var space;
 var accessToken;
