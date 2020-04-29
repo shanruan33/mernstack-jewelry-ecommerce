@@ -12,7 +12,7 @@ const PayCancelled = () => {
     if (obj && obj.token) {
         obj.payment = "cancelled";
         setInStorage('jewelry_app', obj);
-        console.log("order :", obj.order, "payment:", obj.payment);
+        // console.log("order :", obj.order, "payment:", obj.payment);
     }
     return (
         <div className="mt-5 pt-5 text-center">

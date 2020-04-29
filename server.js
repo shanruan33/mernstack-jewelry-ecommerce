@@ -1,3 +1,8 @@
+// Step 0: if not production, then read .env
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 // Import npm packages
 const express = require('express');
 const mongoose = require('mongoose');
@@ -15,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/jewelry',
     useUnifiedTopology: true
 });
 mongoose.connection.on('connected', () => {
-    console.log('Mongoose is connected!!!!');
+    // console.log('Mongoose is connected!!!!');
 });
 
 // treat requests as json requests

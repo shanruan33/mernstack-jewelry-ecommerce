@@ -24,8 +24,7 @@ import Blog from './components/Test/Blog';
 const App = () => (
   <>
     <Header />
-    <Link to="/blog">Blog</Link>
-    <Link to="/login">Login</Link>
+    
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
@@ -39,7 +38,8 @@ const App = () => (
       <Route exact path="/canceled" component={PayCancelled} /> 
       <Route component={NotFound} />
     </Switch>
-
+    <Link to="/blog">Blog</Link>
+    <Link to="/login">Login</Link>
     <Footer />
   </>
 );

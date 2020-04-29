@@ -151,7 +151,7 @@ class Login extends Component {
             }),
         }).then(res => res.json())
             .then(json => {
-                console.log('signup json', json);
+                // console.log('signup json', json);
                 if (json.success) {
                     this.setState({
                         signUpError: json.message,
@@ -197,7 +197,7 @@ class Login extends Component {
             }),
         }).then(res => res.json())
             .then(json => {
-                console.log('signin json', json);
+                // console.log('signin json', json);
                 if (json.success) {
                     //receiveCartItem(json.cart);
                     setInStorage('jewelry_app', { token: json.token, firstName: json.firstName, lastName: json.lastName, cart: json.cart, email: signInEmail, order: [] });

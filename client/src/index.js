@@ -36,10 +36,6 @@ import "./styles/css/cart_responsive.css";
 import "./styles/css/checkout.css";
 import "./styles/css/checkout_responsive.css";
 
-
-
-
-
 ReactDOM.render(
   <ProductProvider>
     <Router>

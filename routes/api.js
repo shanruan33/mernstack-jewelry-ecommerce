@@ -13,13 +13,14 @@ router.get('/', (req, res) => {
     //     username: 'shanruan',
     //     age: '33'
     // }
+    console.log("token from api.js: " + process.env.REACT_APP_STRIPE_TOKEN);
     BlogPost.find({})
         .then((data) => {
-            // console.log('Data: ', data);
+            // // console.log('Data: ', data);
             res.json(data);
         })
         .catch((error) => {
-            console.log('Error: ', error);
+            // console.log('Error: ', error);
         });
 
     // res.json(data);
@@ -58,7 +59,7 @@ router.get('/name', (req, res) => {
 router.post('/account/signup', (req, res, next) => {
     const { body } = req;
     // body = req.body;
-    console.log(body);
+    // console.log(body);
     const {
         firstName,
         lastName,
@@ -174,7 +175,7 @@ router.post('/account/signin', (req, res, next) => {
             });
         }
         const user = users[0];
-        console.log(user);
+        // console.log(user);
         if (!user.validPassword(password)) {
             return res.send({
                 success: false,
@@ -219,7 +220,7 @@ router.get('/account/verify', (req, res, next) => {
         isDeleted: false
     }, (err, sessions) => {
         if (err) {
-            //console.log(err);
+            //// console.log(err);
             return res.send({
                 success: false,
                 message: "Error: server error"
@@ -257,7 +258,7 @@ router.get('/account/logout', (req, res, next) => {
         $set: { isDeleted: true }
     }, null, (err, sessions) => {
         if (err) {
-            console.log(err);
+            // console.log(err);
             return res.send({
                 success: false,
                 message: "Error: server error"

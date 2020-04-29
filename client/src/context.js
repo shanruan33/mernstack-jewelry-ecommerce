@@ -50,7 +50,7 @@ class ProductProvider extends Component {
       });
       let products = this.formatData(response.items);
       let newArrivals = products.filter(product => product.newArrival === true);
-      console.log("New Arrivals", newArrivals);
+      // console.log("New Arrivals", newArrivals);
 
       this.setState({
         products: products,
@@ -61,7 +61,7 @@ class ProductProvider extends Component {
 
       });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 
@@ -70,6 +70,7 @@ class ProductProvider extends Component {
     this.getData();
     this.getUserInfo();
     this.recoverCart();
+    // console.log(process.env.REACT_APP_STRIPE_TOKEN);
   }
 
 
@@ -101,7 +102,7 @@ class ProductProvider extends Component {
     //   this.setState({
     //     size: value
     //   }, () => {
-    //     console.log("size2", this.state.size);
+    //     // console.log("size2", this.state.size);
     //   });
     // }
 
@@ -268,7 +269,7 @@ class ProductProvider extends Component {
           }),
         }).then(res => res.json())
           .then(json => {
-            // console.log('update json', json);
+            // // console.log('update json', json);
             if (json.success) {
               this.setState({
                 signUpError: json.message,
@@ -376,12 +377,12 @@ class ProductProvider extends Component {
     const obj = getFromStorage('jewelry_app');
     if (obj && obj.order) {
       const order = obj.order;
-      console.log(order.length);
+      // console.log(order.length);
       const cart = this.state.cart;
       if (order.length > 0) {
         if (!obj.payment || obj.payment == "cancelled") {
 
-          console.log("payment cancelled");
+          // console.log("payment cancelled");
           order.map((product) => {
             cart.push(product);
           });
@@ -427,15 +428,14 @@ class ProductProvider extends Component {
       cart: [],
       order: tempProducts
     }, () => { this.sendCartItem() });
-    var stripeToken;
-    // config ? stripeToken = config.STRIPE_TOKEN : stripeToken = STRIPE_TOKEN;
-    if (config) {
-      stripeToken = config.STRIPE_TOKEN;
-    } else {
-      stripeToken = process.env.STRIPE_TOKEN;
-    }
-    const stripe = window.Stripe(stripeToken);
-    console.log("checkout clicked");
+    // var stripeToken;
+    // if (config) {
+    //   stripeToken = config.STRIPE_TOKEN;
+    // } else {
+    //   stripeToken = process.env.STRIPE_TOKEN;
+    // }
+    const stripe = window.Stripe(process.env.REACT_APP_STRIPE_TOKEN);
+    // console.log("checkout clicked");
     stripe.redirectToCheckout({
       items: items,
       successUrl: 'http://localhost:8080/success',

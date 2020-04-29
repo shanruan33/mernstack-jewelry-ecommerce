@@ -22,7 +22,7 @@ class Blog extends React.Component {
       .then((response) => {
         const data = response.data;
         this.setState({ posts: data });
-        console.log('Data has been received!!');
+        // console.log('Data has been received!!');
       })
       .catch(() => {
         alert('Error retrieving data!!!');
@@ -49,12 +49,12 @@ class Blog extends React.Component {
       data: payload
     })
       .then(() => {
-        console.log('Data has been sent to the server');
+        // console.log('Data has been sent to the server');
         this.resetUserInputs();
         this.getBlogPost();
       })
       .catch((error) => {
-        console.log('Internal server error ' + error);
+        // console.log('Internal server error ' + error);
       });;
   };
 
@@ -80,7 +80,7 @@ class Blog extends React.Component {
 
   render() {
 
-    console.log('State: ', this.state);
+    // console.log('State: ', this.state);
 
     //JSX
     return (

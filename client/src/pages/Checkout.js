@@ -12,13 +12,13 @@ export const Checkout = () => {
 
     //stripe
     const [stripe, setStripe] = useState(null);
-    var stripeToken;
+    const stripeToken = process.env.REACT_APP_STRIPE_TOKEN;
     // config ? stripeToken = config.STRIPE_TOKEN : stripeToken = STRIPE_TOKEN;
-    if (config) {
-        stripeToken = config.STRIPE_TOKEN;
-    } else {
-        stripeToken = process.env.STRIPE_TOKEN;
-    }
+    // if (config) {
+    //     stripeToken = config.STRIPE_TOKEN;
+    // } else {
+    //     stripeToken = process.env.STRIPE_TOKEN;
+    // }
     // const stripeToken = config.STRIPE_TOKEN;
 
     useEffect(() => {
