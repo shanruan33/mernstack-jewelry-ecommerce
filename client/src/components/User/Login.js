@@ -138,7 +138,7 @@ class Login extends Component {
         });
 
         // Post request to backend
-        fetch('http://localhost:8023/api/account/signup', {
+        fetch('/api/account/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -186,7 +186,7 @@ class Login extends Component {
         });
 
         // Post request to backend
-        fetch('http://localhost:8023/api/account/signin', {
+        fetch('/api/account/signin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
