@@ -22,34 +22,6 @@ mongoose.connection.on('connected', () => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
-// // Schema
-// const Schema = mongoose.Schema;
-// const BlogPostSchema = new Schema({
-//     title: String,
-//     body: String,
-//     date: {
-//         type: String,
-//         default: Date.now()
-//     }
-// });
-
-// // Model
-// const BlogPost = mongoose.model('BlogPost', BlogPostSchema);
-
-// //Save data to mongoDB
-// const data = {
-//     title: 'mern stack test again',
-//     body: 'again again again again'
-// }
-// //.save
-// const newBlogPost = new BlogPost(data); // instance of model
-// newBlogPost.save((error) => {
-//     if (error) {
-//         console.log('oops, something happened');
-//     } else {
-//         console.log('data has been saved!!!!');
-//     }
-// });
 
 // HTTP request logger
 app.use(morgan('tiny'));

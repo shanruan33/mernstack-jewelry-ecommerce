@@ -1,124 +1,46 @@
-import React from 'react';
-import axios from 'axios';
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom'
+
+// import Header from './components/Header/Header';
+// import Footer from './components/Footer/Footer';
+// import NotFound from './components/App/NotFound';
+import Login from './components/User/Login';
+// import Home from './pages/Home';
+// import Contact from './pages/Contact';
+// import Shop from './pages/Shop';
+// import SingleProduct from './pages/SingleProduct';
+// import Cart from './pages/Cart';
+// import Checkout from './pages/Checkout';
+// import PaySuccess from './components/App/PaySuccess';
+// import PayCancelled from './components/App/PayCancelled';
+import Blog from './components/Test/Blog';
 
 
-import './App.css';
+const App = () => (
+  <>
+    {/* <Header /> */}
 
-class App extends React.Component {
+    <Switch>
+      {/* <Route exact path="/" component={Home} /> */}
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/blog" component={Blog} />
+      {/* <Route exact path="/contact" component={Contact} />
+      <Route exact path="/shop" component={Shop} />
+      <Route exact path="/shop/:id" component={SingleProduct} />
+      <Route exact path="/cart" component={Cart} />
+      <Route exact path="/checkout" component={Checkout} />
+      <Route exact path="/success" component={PaySuccess} />      
+      <Route exact path="/canceled" component={PayCancelled} /> 
+      <Route component={NotFound} /> */}
+    </Switch>
 
-  state = {
-    title: '',
-    body: '',
-    posts: []
-  };
-
-  componentDidMount = () => {
-    this.getBlogPost();
-  };
-
-
-  getBlogPost = () => {
-    axios.get('/api')
-      .then((response) => {
-        const data = response.data;
-        this.setState({ posts: data });
-        console.log('Data has been received!!');
-      })
-      .catch(() => {
-        alert('Error retrieving data!!!');
-      });
-  }
-
-  handleChange = ({ target }) => {
-    const { name, value } = target;
-    this.setState({ [name]: value });
-  };
-
-  submit = (event) => {
-    event.preventDefault();
-
-    const payload = {
-      title: this.state.title,
-      body: this.state.body
-    };
-
-
-    axios({
-      url: '/api/save',
-      method: 'POST',
-      data: payload
-    })
-      .then(() => {
-        console.log('Data has been sent to the server');
-        this.resetUserInputs();
-        this.getBlogPost();
-      })
-      .catch((error) => {
-        console.log('Internal server error ' + error);
-      });;
-  };
-
-  resetUserInputs = () => {
-    this.setState({
-      title: '',
-      body: ''
-    });
-  };
-
-  displayBlogPost = (posts) => {
-
-    if (!posts.length) return null;
-
-
-    return posts.map((post, index) => (
-      <div key={index} className="blog-post__display">
-        <h3>{post.title}</h3>
-        <p>{post.body}</p>
-      </div>
-    ));
-  };
-
-  render() {
-
-    console.log('State: ', this.state);
-
-    //JSX
-    return (
-      <div className="app">
-        <h2>Welcome to the best jewelry app ever</h2>
-        <form onSubmit={this.submit}>
-          <div className="form-input">
-            <input
-              type="text"
-              name="title"
-              placeholder="Title"
-              value={this.state.title}
-              onChange={this.handleChange}
-            />
-          </div>
-          <div className="form-input">
-            <textarea
-              placeholder="body"
-              name="body"
-              cols="30"
-              rows="10"
-              value={this.state.body}
-              onChange={this.handleChange}
-            >
-
-            </textarea>
-          </div>
-
-          <button>Submit</button>
-        </form>
-
-        <div className="blog-">
-          {this.displayBlogPost(this.state.posts)}
-        </div>
-      </div>
-    );
-  }
-}
-
+    {/* <Footer /> */}
+  </>
+);
 
 export default App;
