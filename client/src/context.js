@@ -5,7 +5,7 @@ import {
   setInStorage
 } from './utils/storage';
 import Client from './Contentful';
-// import config from './config';
+import config from './config';
 // import $ from 'jquery';
 // import "core-js/stable";
 // import "regenerator-runtime/runtime";
@@ -50,7 +50,7 @@ class ProductProvider extends Component {
       });
       let products = this.formatData(response.items);
       let newArrivals = products.filter(product => product.newArrival === true);
-      console.log("New Arrivals",newArrivals);
+      console.log("New Arrivals", newArrivals);
 
       this.setState({
         products: products,
@@ -427,8 +427,13 @@ class ProductProvider extends Component {
       cart: [],
       order: tempProducts
     }, () => { this.sendCartItem() });
-    const stripeToken;
-    config ? stripeToken = config.STRIPE_TOKEN : stripeToken = STRIPE_TOKEN;
+    var stripeToken;
+    // config ? stripeToken = config.STRIPE_TOKEN : stripeToken = STRIPE_TOKEN;
+    if (config) {
+      stripeToken = config.STRIPE_TOKEN;
+    } else {
+      stripeToken = process.env.STRIPE_TOKEN;
+    }
     const stripe = window.Stripe(stripeToken);
     console.log("checkout clicked");
     stripe.redirectToCheckout({
