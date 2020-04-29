@@ -5,7 +5,7 @@ import {
   setInStorage
 } from './utils/storage';
 import Client from './Contentful';
-import config from './config';
+// import config from './config';
 // import $ from 'jquery';
 // import "core-js/stable";
 // import "regenerator-runtime/runtime";
@@ -93,8 +93,8 @@ class ProductProvider extends Component {
 
   handleChange = event => {
     var name = event.target.name;
-    var value = event.target.value;
-    var type = event.target.type;
+    // var value = event.target.value;
+    // var type = event.target.type;
 
     //size
     // if (type == "radio") {
