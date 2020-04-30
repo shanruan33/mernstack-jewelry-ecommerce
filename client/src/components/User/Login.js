@@ -5,7 +5,7 @@ import {
     getFromStorage,
     setInStorage
 } from '../../utils/storage';
-//import { ProductContext } from '../../context';
+import { ProductContext } from '../../context';
 
 class Login extends Component {
     constructor(props) {
@@ -41,16 +41,16 @@ class Login extends Component {
         this.goLogIn = this.goLogIn.bind(this);
     }
 
-    // static contextType = ProductContext;
+    static contextType = ProductContext;
 
 
     componentDidMount() {
         const obj = getFromStorage('jewelry_app');
-        // const value = this.context;
-        // const receiveCartItem = value.receiveCartItem;
-        // if (obj && obj.cart) {
-        //     receiveCartItem(obj.cart);
-        // }
+        const value = this.context;
+        const receiveCartItem = value.receiveCartItem;
+        if (obj && obj.cart) {
+            receiveCartItem(obj.cart);
+        }
 
 
 
@@ -172,8 +172,8 @@ class Login extends Component {
     }
 
     onSignIn() {
-        // const value = this.context;
-        // const receiveCartItem = value.receiveCartItem;
+        const value = this.context;
+        const receiveCartItem = value.receiveCartItem;
 
         // Grab state
         const {
@@ -199,7 +199,7 @@ class Login extends Component {
             .then(json => {
                 // console.log('signin json', json);
                 if (json.success) {
-                    //receiveCartItem(json.cart);
+                    receiveCartItem(json.cart);
                     setInStorage('jewelry_app', { token: json.token, firstName: json.firstName, lastName: json.lastName, cart: json.cart, email: signInEmail, order: [] });
                     this.setState({
                         signInError: json.message,
@@ -221,8 +221,8 @@ class Login extends Component {
     };
 
     logout() {
-        // const value = this.context;
-        // const clearCart = value.clearCart;
+        const value = this.context;
+        const clearCart = value.clearCart;
         this.setState({
             isLoading: true,
         });
@@ -235,7 +235,7 @@ class Login extends Component {
                 .then(json => {
                     if (json.success) {
                         setInStorage('jewelry_app', {});
-                        //clearCart();
+                        clearCart();
                         this.setState({
                             token: '',
                             isLoading: false,

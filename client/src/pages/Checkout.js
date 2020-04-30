@@ -155,7 +155,16 @@ export const Checkout = () => {
                                                     <div className="visa payment_option"><a href="#"><img src={visaImg} alt="" /></a></div>
                                                     <div className="master payment_option"><a href="#"><img src={masterImg} alt="" /></a></div>
                                                 </div>
-                                                {(checkSignIn()) ? <button className="cart_total_button" onClick={() => checkout()}>place order</button> : <><button className="cart_total_button" onClick={() => checkout()}>place order as a guest</button><Link to="/login"><button className="cart_total_button">or login / sign up</button></Link></>}
+                                                {(checkSignIn()) ?
+                                                    <button
+                                                        className="cart_total_button"
+                                                        // onClick={() => checkout()}
+                                                    >place order</button>
+                                                    : <><button
+                                                        className="cart_total_button"
+                                                        // onClick={() => checkout()}
+                                                    >place order as a guest</button>
+                                                        <Link to="/login"><button className="cart_total_button">or login / sign up</button></Link></>}
 
                                             </div>
                                         </div>

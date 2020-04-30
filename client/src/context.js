@@ -208,12 +208,15 @@ class ProductProvider extends Component {
   sortCart = (cart) => {
     const ids = [...new Set(cart.map(obj => obj.id))]
     let sortedCart = [];
-    // ids.map(id => {
-    //   const length = cart.filter(product => product.id == id).length;
-    //   const result = cart.find(product => product.id == id);
-    //   (length >= 1) ? result.count = length : null;
-    //   sortedCart.push(result);
-    // });
+    ids.map(id => {
+      const length = cart.filter(product => product.id == id).length;
+      const result = cart.find(product => product.id == id);
+      // (length >= 1) ? result.count = length : null;
+      if(length >= 1){
+        result.count = length;
+      }
+      sortedCart.push(result);
+    });
     this.setState({
       sortedCart: sortedCart
     });
@@ -427,12 +430,6 @@ class ProductProvider extends Component {
       cart: [],
       order: tempProducts
     }, () => { this.sendCartItem() });
-    // var stripeToken;
-    // if (config) {
-    //   stripeToken = config.STRIPE_TOKEN;
-    // } else {
-    //   stripeToken = process.env.STRIPE_TOKEN;
-    // }
     const stripe = window.Stripe(process.env.REACT_APP_STRIPE_TOKEN);
     // console.log("checkout clicked");
     stripe.redirectToCheckout({
