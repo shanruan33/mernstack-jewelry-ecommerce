@@ -38,8 +38,8 @@ const App = () => (
       <Route exact path="/canceled" component={PayCancelled} /> 
       <Route component={NotFound} />
     </Switch>
-    <Link to="/blog">Blog</Link>
-    <Link to="/login">Login</Link>
+    {/* <Link to="/blog">Blog</Link>
+    <Link to="/login">Login</Link> */}
     <Footer />
   </>
 );

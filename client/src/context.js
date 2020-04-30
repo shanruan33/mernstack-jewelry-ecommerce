@@ -211,7 +211,6 @@ class ProductProvider extends Component {
     ids.map(id => {
       const length = cart.filter(product => product.id == id).length;
       const result = cart.find(product => product.id == id);
-      // (length >= 1) ? result.count = length : null;
       if(length >= 1){
         result.count = length;
       }
@@ -434,8 +433,8 @@ class ProductProvider extends Component {
     // console.log("checkout clicked");
     stripe.redirectToCheckout({
       items: items,
-      successUrl: 'http://localhost:8080/success',
-      cancelUrl: 'http://localhost:8080/canceled',
+      successUrl: 'https://ssjewelry.shanruan.io/success',
+      cancelUrl: 'https://ssjewelry.shanruan.io/canceled',
       // customerEmail: this.state.email
     });
   }
