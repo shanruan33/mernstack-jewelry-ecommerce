@@ -5,7 +5,6 @@ import { ProductContext, ProductConsumer } from '../context';
 import visaImg from '../assets/images/visa.jpg';
 import masterImg from '../assets/images/master.jpg';
 import CheckoutItem from '../components/App/ChechoutItem';
-// import config from '../config';
 
 
 export const Checkout = () => {
@@ -13,13 +12,6 @@ export const Checkout = () => {
     //stripe
     const [stripe, setStripe] = useState(null);
     const stripeToken = process.env.REACT_APP_STRIPE_TOKEN;
-    // config ? stripeToken = config.STRIPE_TOKEN : stripeToken = STRIPE_TOKEN;
-    // if (config) {
-    //     stripeToken = config.STRIPE_TOKEN;
-    // } else {
-    //     stripeToken = process.env.STRIPE_TOKEN;
-    // }
-    // const stripeToken = config.STRIPE_TOKEN;
 
     useEffect(() => {
         if (window.Stripe) setStripe(window.Stripe(stripeToken))

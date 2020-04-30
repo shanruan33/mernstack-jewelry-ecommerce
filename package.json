@@ -6,12 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "client": "cd client && npm start",
-    "dev": "concurrently -n 'server,client' -c 'yellow,green'  \"nodemon server.js\" \"npm run client\"",
+    
+    "start-client": "cd client && npm start",
+    "server": "concurrently -n 'server' -c 'yellow' \"nodemon server.js\" ",
+    "client": "concurrently -n 'client' -c 'green'  \"npm run start-client\" ",
+    "dev": "concurrently -n 'server,client' -c 'yellow,green'  \"nodemon server.js\" \"npm run start-client\"",
 
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build-client",
     "install-client": "cd client && npm install",
-    "build": "cd client && npm run build"
+    "build-client": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
