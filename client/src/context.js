@@ -36,7 +36,6 @@ class ProductProvider extends Component {
       // ring: false,
       // earring: false,
     };
-    // this.onTextboxChangeSignInEmail = this.onTextboxChangeSignInEmail.bind(this);
 
   };
 
@@ -69,7 +68,6 @@ class ProductProvider extends Component {
     this.getData();
     this.getUserInfo();
     this.recoverCart();
-    // console.log(process.env.REACT_APP_STRIPE_TOKEN);
   }
 
 

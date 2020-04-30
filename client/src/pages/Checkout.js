@@ -158,11 +158,11 @@ export const Checkout = () => {
                                                 {(checkSignIn()) ?
                                                     <button
                                                         className="cart_total_button"
-                                                        onClick={() => checkout()}
+                                                        // onClick={() => checkout()}
                                                     >place order</button>
                                                     : <><button
                                                         className="cart_total_button"
-                                                        onClick={() => checkout()}
+                                                        // onClick={() => checkout()}
                                                     >place order as a guest</button>
                                                         <Link to="/login"><button className="cart_total_button">or login / sign up</button></Link></>}
 
