@@ -11,7 +11,7 @@ export const Checkout = () => {
 
     //stripe
     const [stripe, setStripe] = useState(null);
-    const stripeToken = "pk_test_iLMNoDebIdHBrD0vDzNPieTV000FbD0rmQ";
+    const stripeToken = process.env.REACT_APP_STRIPE_TOKEN;
     console.log(process.env.REACT_APP_STRIPE_TOKEN);
 
     useEffect(() => {
