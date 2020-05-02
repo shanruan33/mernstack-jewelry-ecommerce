@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
     //     username: 'shanruan',
     //     age: '33'
     // }
-    console.log("token from api.js: " + process.env.REACT_APP_STRIPE_TOKEN);
     BlogPost.find({})
         .then((data) => {
             // // console.log('Data: ', data);
@@ -281,7 +280,7 @@ router.post('/account/update', (req, res, next) => {
 
     //email = email.toLowerCase();
 
-    console.log('update', body);
+    // console.log('update', body);
 
     User.findOneAndUpdate({
         email: email,
