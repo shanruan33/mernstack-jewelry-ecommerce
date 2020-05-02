@@ -24,7 +24,7 @@ class ProductProvider extends Component {
       cart: [],
       quantity: 0,
       size: "",
-      email: '',
+      email: 'sample@email.com',
       inCart: false,
       order: [],
       count: 0,
@@ -433,7 +433,7 @@ class ProductProvider extends Component {
       items: items,
       successUrl: 'https://ssjewelry.shanruan.io/success',
       cancelUrl: 'https://ssjewelry.shanruan.io/canceled',
-      // customerEmail: this.state.email
+      customerEmail: this.state.email
     });
   }
 
