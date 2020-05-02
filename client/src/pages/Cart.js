@@ -119,9 +119,9 @@ export default class Cart extends Component {
                                             <div className="cart_total_price ml-auto">${cartTotal}</div>
                                         </li>
                                     </ul>
-                                    {/* <Link to="/checkout"> */}
+                                    <Link to="/checkout">
                                         <button className="cart_total_button">proceed to checkout</button>
-                                    {/* </Link> */}
+                                    </Link>
                                 </div>
                             </div>
                         </div>
