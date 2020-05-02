@@ -68,6 +68,7 @@ class ProductProvider extends Component {
     this.getData();
     this.getUserInfo();
     this.recoverCart();
+    console.log(process.env.REACT_APP_STRIPE_TOKEN);
   }
 
 

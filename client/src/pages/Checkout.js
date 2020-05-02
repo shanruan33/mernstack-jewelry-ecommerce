@@ -11,7 +11,8 @@ export const Checkout = () => {
 
     //stripe
     const [stripe, setStripe] = useState(null);
-    const stripeToken = process.env.REACT_APP_STRIPE_TOKEN;
+    const stripeToken = "pk_test_iLMNoDebIdHBrD0vDzNPieTV000FbD0rmQ";
+    console.log(process.env.REACT_APP_STRIPE_TOKEN);
 
     useEffect(() => {
         if (window.Stripe) setStripe(window.Stripe(stripeToken))
