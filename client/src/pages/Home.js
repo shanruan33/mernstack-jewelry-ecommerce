@@ -43,7 +43,7 @@ export const Home = () => {
                     <div className="row promo_container">
 
 
-                        <div className="col-lg-4 promo_col">
+                        <div className="col-md-4 promo_col">
                             <div className="promo_item">
                                 <div className="promo_image">
                                     <img src={ring4} alt="" />
@@ -54,7 +54,7 @@ export const Home = () => {
                         </div>
 
 
-                        <div className="col-lg-4 promo_col">
+                        <div className="col-md-4 promo_col">
                             <div className="promo_item">
                                 <div className="promo_image">
                                     <img src={bracelet4} alt="" />
@@ -65,7 +65,7 @@ export const Home = () => {
                         </div>
 
 
-                        <div className="col-lg-4 promo_col">
+                        <div className="col-md-4 promo_col">
                             <div className="promo_item">
                                 <div className="promo_image">
                                     <img src={earing4} alt="" />

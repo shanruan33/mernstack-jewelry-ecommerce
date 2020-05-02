@@ -141,7 +141,7 @@
 	}
 	.section_title
 	{
-		font-size: 48px;
+		font-size: 38px !important;
 	}
 	.promo_col:not(:last-child)
 	{
@@ -191,7 +191,25 @@
 
 @media only screen and (max-width: 767px)
 {
-	
+	.footer_logo a {
+		font-size: 32px;
+	}
+	.col-md-4{
+		width: 33%;
+	}
+	.arrivals {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.testimonials {
+		width: 100%;
+		padding-top: unset;
+		padding-bottom: 30px;
+	}
+	.sidebar_left {
+		padding-bottom: 20px !important;
+	}
+
 }
 
 /************
@@ -271,7 +289,7 @@
 	}
 	.section_title
 	{
-		font-size: 28px;
+		font-size: 28px !important;
 	}
 
 
@@ -280,10 +298,7 @@
 		font-size: 16px;
 	}
 	
-	.footer_logo a
-	{
-		font-size: 48px;
-	}
+	
 	.footer_nav ul li
 	{
 		display: block;

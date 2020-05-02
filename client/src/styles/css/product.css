@@ -208,7 +208,7 @@
 	font-size: 30px;
 	font-weight: 600;
 	color: #232323;
-	line-height: 1.5;
+	line-height: 1;
 }
 .product_price
 {
@@ -468,3 +468,4 @@
 	float: right;
 	margin-right: 5px;
 }
+

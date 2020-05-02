@@ -26,7 +26,9 @@ export const Footer = () => (
             </ul>
           </div>
           <div className="copyright">
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+            {/* Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved */}
+            Note: The content and assets of the website include text and images are from missoma.com<br></br>
+The website is only for display/study use, not for commercial use
 </div>
         </div>
       </div>

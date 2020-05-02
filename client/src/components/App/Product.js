@@ -6,7 +6,7 @@ import eye from '../../assets/images/camera-solid.svg';
 export const Product = ({ product }) => {
 
     return (
-        <div className="col-md-4">
+        <div className="col-md-3">
             <div className="product_grid">
                 {/* product */}
                 <div className="cateProduct">

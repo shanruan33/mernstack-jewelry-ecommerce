@@ -92,6 +92,9 @@
 
 @media only screen and (max-width: 767px)
 {
+	.col-md-3 {
+		width:50%
+	}
 	.catepProduct
 	{
 		width: 100%;
@@ -102,7 +105,7 @@
 		top: auto;
 		left: auto;
 		width: 100%;
-		padding-bottom: 98px;
+		/* padding-bottom: 98px; */
 	}
 	.sidebar_section
 	{
