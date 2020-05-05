@@ -1,5 +1,5 @@
 import React from 'react'
-import Background1 from '../assets/home/bg7.png';
+import Background1 from '../assets/home/bg8.png';
 import { Link } from 'react-router-dom';
 import ring4 from '../assets/product/ring/1/4.jpg';
 import bracelet4 from '../assets/product/bracelet/1/4.jpg';
