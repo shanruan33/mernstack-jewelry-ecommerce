@@ -1,9 +1,12 @@
-# Jewelry Ecommerce MERN App
+# Jewelry Ecommerce MERN Stack App
 ## Live Demo
 https://ssjewelry.shanruan.io/
 ## Description: 
+
 S&S Jewelry is a fully functional SPA shopping website with a unique AR try-on feature. Users are able to try the jewelry on mobile through Instagram effects. Together with the overall design of the website, it provides a nice purchasing experience. This website is hosted on Heroku with all function enabled, including branding, product listing & filtering, shopping cart editing and final payment.
-![](client/public/jewelry.png)
+
+![](client/public/ssjewelry.png)
+
 ## Technical Sheet
 - React: State & Lifecycle, Context (Provider, Consumer), React Icon, Hook (State, Effect), Event Handler, Conditional Rendering, Lists & Keys, Forms, Lifting State Up, Composition, Higher-Order Components, Router DOM, Fragments, etc.
 - HTML/CSS: Structure and Layout Design
